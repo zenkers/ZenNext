@@ -1,33 +1,33 @@
 <template>
-    <div class="zen-frame">
-        <div class=" zen-content">
+    <div class = "zen-frame" >
+        <div class = "zen-content" >
             <h2>{{ data.title }}</h2>
             <p>{{ data.content }}</p>
         </div>
 
-        <div class="zen-button--container">
-            <button class="zen-button zen-button--next" 
-                    @click="nextFrame" 
-                    v-if="index === length-1">
+        <div class = "zen-button--container" >
+            <button class = "zen-button zen-button--next" 
+                    @click = "nextFrame" 
+                    v-if = "index === length-1" >
                 Next
             </button>
-            <span v-else-if="index === 0">
-                <button class="zen-button--half zen-button--previous" 
-                        @click="previousFrame">
+            <span v-else-if= "index === 0" >
+                <button class = "zen-button--half zen-button--previous" 
+                        @click = "previousFrame" >
                     Previous
                 </button>
-                <button class="zen-button--half zen-button--close" 
-                        @click="closeModal">
+                <button class = "zen-button--half zen-button--close" 
+                        @click = "closeModal" >
                     Close
                 </button>
             </span>
             <span v-else>
-                <button class="zen-button--half zen-button--previous" 
-                        @click="previousFrame">
+                <button class = "zen-button--half zen-button--previous" 
+                        @click = "previousFrame" >
                     Previous
                 </button>
-                <button class="zen-button--half zen-button--next" 
-                        @click="nextFrame">
+                <button class = "zen-button--half zen-button--next" 
+                        @click = "nextFrame" >
                     Next
                 </button>
             </span>

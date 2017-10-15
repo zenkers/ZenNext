@@ -1,12 +1,12 @@
 <template>
-    <div class="zen-window" 
-         :class="{ active: visible }">
-        <div class="zen-wrapper">
-            <zen-frame v-for="(frame, index) in reverseContent"
+    <div class = "zen-window" 
+         :class = "{ active: visible }" >
+        <div class = "zen-wrapper" >
+            <zen-frame v-for = "(frame, index) in reverseContent"
                        :data = "frame"
                        :index = "index"
                        :length = "modalContent.length"
-                       @visible="visible = $event" >
+                       @visible = "visible = $event" >
             </zen-frame>
         </div>
     </div>
@@ -17,7 +17,7 @@
     export default {
         props: ['visible', 'modalContent'],
         components: {
-            'zen-frame' : ZenFrame
+            'zen-frame': ZenFrame
         },
         computed: {
             reverseContent: function() {

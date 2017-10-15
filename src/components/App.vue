@@ -1,8 +1,8 @@
 <template>
 	<div id="app">
-		<zen-next :visible="modalVisible"
-				  :modalContent="modalContent"
-				  @modalVisible="modalVisible = $event">
+		<zen-next :visible = "modalVisible"
+				  :modalContent = "modalContent"
+				  @modalVisible = "modalVisible = $event" >
 		</zen-next>
 		<div class="container"></div>
 	</div>
@@ -13,7 +13,7 @@
 	export default {
 		name: 'app',
 		components: {
-			'zen-next' : ZenNext
+			'zen-next': ZenNext
 		},
 		data() {
 			return {
