@@ -3,8 +3,7 @@
          :class="{ active: visible }">
         <div class="zen-wrapper">
             <zen-frame v-for="(frame, index) in reverseContent"
-                       :title = "frame.title"
-                       :content = "frame.content"
+                       :data = "frame"
                        :index = "index"
                        :length = "modalContent.length"
                        @visible="visible = $event" >

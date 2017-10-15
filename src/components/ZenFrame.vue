@@ -1,8 +1,8 @@
 <template>
     <div class="zen-frame">
         <div class=" zen-content">
-            <h2>{{ title }}</h2>
-            <p>{{ content }}</p>
+            <h2>{{ data.title }}</h2>
+            <p>{{ data.content }}</p>
         </div>
 
         <div class="zen-button--container">
@@ -37,7 +37,7 @@
 
 <script>
     export default {
-        props: ['index', 'title', 'content', 'length', 'visible'],
+        props: ['index', 'data', 'length', 'visible'],
         methods: {
             // Recursively checks for @classString in node.classList
             // If not found, checks node.offsetParent
