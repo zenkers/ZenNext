@@ -37,7 +37,7 @@
 
 <script>
     export default {
-        props: ['index', 'data', 'length', 'visible'],
+        props: ['index', 'key', 'data', 'length', 'visible'],
         // Active frame handling will be cleaner once I implement vuex!
         methods: {
             // Recursively checks for @classString in node.classList

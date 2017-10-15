@@ -6,6 +6,7 @@
                 <zen-frame v-for = "(frame, index) in reverseContent"
                         :data = "frame"
                         :index = "index"
+                        :key = "index"
                         :length = "modalContent.length"
                         @visible = "visible = $event" >
                 </zen-frame>
