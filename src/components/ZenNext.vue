@@ -40,6 +40,9 @@ export default {
         .zen-bg {
             position: absolute;
             background-color: black;
+            animation-name: fadeIn;
+            animation-duration: .4s;
+            animation-fill-mode: both;
             top: 0;
             right: 0;
             bottom: 0;
@@ -72,6 +75,15 @@ export default {
         }
         to {
             transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
         }
     }
 </style>
