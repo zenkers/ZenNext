@@ -42,12 +42,10 @@
             // Recursively checks for @classString in node.classList
             // If not found, checks node.offsetParent
             findParent(node, classString) {
-                if ( node.classList ) {
-                    if (node.classList.contains(classString)) {
-                        return node
-                    } else {
-                        return this.findParent(node.offsetParent, classString)
-                    }
+                if ( node.classList && node.classList.contains(classString) ) {
+                    return node
+                } else if ( node.offsetParent ) {
+                    return this.findParent(node.offsetParent, classString)
                 } else {
                     return false
                 }
@@ -118,11 +116,19 @@
                 padding: 10px;
                 color: white;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
                 &--half {
                     width: 50%;
                     padding: 10px;
                     float: left;
                     color: white;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 &--next {
